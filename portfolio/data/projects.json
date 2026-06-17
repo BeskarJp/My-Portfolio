@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "name": {
+        "fr": "42sh",
+        "en": "42sh",
+        "es": "42sh"
+    },
+    "context": {
+        "fr": "Projet Epitech",
+        "en": "Epitech Project",
+        "es": "Proyecto Epitech"
+    },
+    "language": "C",
+    "year": "2026",
+    "description": {
+      "fr": "Reproduction d'un shell UNIX (tcsh).",
+      "en": "Reproduction of a UNIX shell (tcsh).",
+      "es": "Reproducción de un shell UNIX (tcsh)."
+    },
+    "skills": ["C", "Shell Scripting", "Parsing", "UNIX API", "Process Management"],
+    "github_link": "https://github.com/BeskarJp/42sh"
+  },
+  {
+    "id": 2,
+    "name": {
+        "fr": "Key2Kill-Hackaton",
+        "en": "Key2Kill-Hackaton",
+        "es": "Key2Kill-Hackaton"
+    },
+    "context": {
+        "fr": "Hackaton",
+        "en": "Hackathon",
+        "es": "Hackathon"
+    },
+    "language": "C# Unity",
+    "year": "2026",
+    "description": {
+      "fr": "Jeu de survie basé sur la frappe clavier développé en 48h.",
+      "en": "Typing-based survival game developed in 48 hours.",
+      "es": "Juego de supervivencia basado en escritura desarrollado en 48 horas."
+    },
+    "skills": ["C#", "Unity", "Game Development", "Gameplay Programming"],
+    "github_link": "https://github.com/BeskarJp/Key2Kill-Hackaton"
+  },
+    {
+    "id": 3,
+    "name": {
+        "fr": "My-Portfolio",
+        "en": "My-Portfolio",
+        "es": "My-Portfolio"
+    },
+    "context": {
+        "fr": "Projet Personnel",
+        "en": "Personal Project",
+        "es": "Proyecto Personal"
+    },
+    "language": "JavaScript (JS)",
+    "year": "2026",
+    "description": {
+      "fr": "Le dépôt de mon site portfolio personnel.",
+      "en": "My personal portfolio repository.",
+      "es": "El repositorio de mi portafolio personal."
+    },
+    "skills": ["HTML / CSS", "JavaScript (JS)", "Web Development"],
+    "github_link": "https://github.com/BeskarJp/My-Portfolio"
+  },
+  {
+    "id": 4,
+    "name": {
+        "fr": "my_CLib",
+        "en": "my_CLib",
+        "es": "my_CLib"
+    },
+    "context": {
+        "fr": "Projet Personnel",
+        "en": "Personal Project",
+        "es": "Proyecto Personal"
+    },
+    "language": "C",
+    "year": "2025-Now",
+    "description": {
+      "fr": "Bibliothèque C personnelle réimplémentant des fonctions standard de la Lib C.",
+      "en": "Personal C library with standard function reimplementations of C Lib.",
+      "es": "Librería C personal que reimplementa funciones estándar del C Lib."
+    },
+    "skills": ["C", "Low-level Programming", "Memory Management"],
+    "github_link": "https://github.com/BeskarJp/my_CLib"
+  },
+  {
+    "id": 5,
+    "name": {
+        "fr": "Organized",
+        "en": "Organized",
+        "es": "Organized"
+    },
+    "context": {
+        "fr": "Projet Epitech",
+        "en": "Epitech Project",
+        "es": "Proyecto Epitech"
+    },
+    "language": "C",
+    "year": "2025",
+    "description": {
+      "fr": "Gestionnaire de stock matériel basé sur des listes chaînées.",
+      "en": "Hardware stock manager using linked lists.",
+      "es": "Gestor de stock de hardware usando listas enlazadas."
+    },
+    "skills": ["C", "Linked Lists", "Sorting Algorithms", "Data Structures"],
+    "github_link": "https://github.com/BeskarJp/Organized"
+  },
+  {
+    "id": 6,
+    "name": {
+        "fr": "MyEpitech-Extension",
+        "en": "MyEpitech-Extension",
+        "es": "MyEpitech-Extension"
+    },
+    "context": {
+        "fr": "Projet Epitech",
+        "en": "Epitech Project",
+        "es": "Proyecto Epitech"
+    },
+    "language": "JavaScript (JS) (JS)",
+    "year": "2026",
+    "description": {
+      "fr": "Extension pour New MyEpitech.",
+      "en": "Extension for New MyEpitech.",
+      "es": "Extensión para New MyEpitech."
+    },
+    "skills": ["JavaScript (JS)", "HTML / CSS", "Browser Extensions", "DOM Manipulation"],
+    "github_link": "https://github.com/BeskarJp/MyEpitech-Extension"
+  },
+  {
+    "id": 7,
+    "name": {
+        "fr": "my_radar",
+        "en": "my_radar",
+        "es": "my_radar"
+    },
+    "context": {
+        "fr": "Projet Epitech",
+        "en": "Epitech Project",
+        "es": "Proyecto Epitech"
+    },
+    "language": "C",
+    "year": "2025",
+    "description": {
+      "fr": "Simulateur de trafic aérien.",
+      "en": "Air traffic simulator.",
+      "es": "Simulador de tráfico aéreo."
+    },
+    "skills": ["C", "CSFML", "Graphics Programming"],
+    "github_link": "https://github.com/BeskarJp/my_radar"
+  }
+]

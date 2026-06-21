@@ -2,28 +2,49 @@
 
 <html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My-Portfolio - BeskarJp</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Portfolio - BeskarJp</title>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
 
-    <body>
+<body>
 
-        <header>
-            <h1> Bienvenue sur mon site !</h1>
-        </header>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/icons/My-Portfolio-logo.png" alt="Logo BeskarJp">
+            </div>
+            <ul class="nav-links">
+                <li> <a href="#about.html">Accueil</a> </li>
+                <li> <a href="#projects.html">Projets</a> </li>
+                <li> <a href="https://github.com/BeskarJp" target="_blank" rel="noopener noreferrer">GitHub</a> </li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section>
-                <h2>En cours de mise en place...</h2>
-            </section>
-        </main>
+    <main>
+        <section id="about" class="hero">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <p>Étudiant à Epitech & Développeur Passionné.</p>
+        </section>
 
-        <footer>
-            <p>2026 - BeskarJp's Portfolio</p>
-        </footer>
+        <section id="projects" class="projects-section">
+            <h2>Mes Projets</h2>
+            <div id="projects-grid" class="grid">
+                </div>
+        </section>
+    </main>
 
-    </body>
+    <footer>
+        <p>© 2026 - BeskarJp's Portfolio.</p>
+    </footer>
+
+    <script src="js/projects.js"></script>
+</body>
 
 </html>

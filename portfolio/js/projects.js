@@ -1,6 +1,8 @@
-const PROJECTS_DATA = 'data/projects.json';
+const PROJECTS_DATA = window.location.pathname.includes('/pages/') 
+    ? '../data/projects.json' 
+    : 'data/projects.json';
 
-let currentLanguage = 'fr'; 
+let currentLanguage = 'fr';
 
 /**
  * Function for fetch and display projects' data
@@ -19,8 +21,10 @@ async function loadProjects() {
 
     } catch (error) {
         console.error("The data about projects is unavailable :", error);
-        document.getElementById('projects-grid').innerHTML = 
-            `<p style="text-align: center; color: red;">The data about projects is unavailable.</p>`;
+        const grid = document.getElementById('projects-grid') || document.getElementById('recent-projects-grid');
+        if (grid) {
+            grid.innerHTML = `<p style="text-align: center; color: red;">The data about projects is unavailable.</p>`;
+        }
     }
 }
 
@@ -28,9 +32,11 @@ async function loadProjects() {
  * Create a HTML card for one project
  *
  * @param {Object} project - Data from projects.json
+ * @param {Boolean} isIndexPage - True si on est sur index.html
+ *
  * @returns {HTMLElement} HTML tag <article> for the card
  */
-function createProjectCard(project) {
+function createProjectCard(project, isIndexPage = false) {
 
     const cardElement = document.createElement('article');
     cardElement.classList.add('card');
@@ -43,15 +49,34 @@ function createProjectCard(project) {
         .map(skill => `<span class="skill-tag">${skill}</span>`)
         .join('');
 
-    cardElement.innerHTML = `
-        <h3>${title}</h3>
-        <span class="context">${context} - ${project.year}</span>
-        <p>${description}</p>
-        <div class="skills">
-            ${skillsHtml}
-        </div>
-        <a href="${project.github_link}" target="_blank" rel="noopener noreferrer" class="github-btn">See project to GitHub</a>
-    `;
+    const imageHtml = (!isIndexPage && project.image) 
+        ? `<img src="${project.image}" alt="Image du projet ${title}" class="project-img">` 
+        : '';
+
+    if (isIndexPage) {
+        cardElement.innerHTML = `
+            <h3>${title}</h3>
+            <span class="context">${context} - ${project.year}</span>
+            <p>${description}</p>
+            <div class="skills">
+                ${skillsHtml}
+            </div>
+            <a href="${project.github_link}" target="_blank" rel="noopener noreferrer" class="github-btn">See project to GitHub</a>
+        `;
+    } else {
+        cardElement.innerHTML = `
+            ${imageHtml}
+            <h3>${title}</h3>
+            <span class="context">${context} - ${project.year}</span>
+            <p>${description}</p>
+            <div class="skills">
+                ${skillsHtml}
+            </div>
+            <div class="card-actions">
+                <a href="${project.github_link}" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+            </div>
+        `;
+    }
 
     return cardElement;
 }
@@ -63,12 +88,31 @@ function createProjectCard(project) {
  */
 function renderProjects(projects) {
 
-    const gridContainer = document.getElementById('projects-grid');
-    gridContainer.innerHTML = '';
+    const recentGrid = document.getElementById('recent-projects-grid');
+    const olderGrid = document.getElementById('older-projects-grid');
+    const mainGrid = document.getElementById('projects-grid');
+
+    if (recentGrid)
+        recentGrid.innerHTML = '';
+    if (olderGrid)
+        olderGrid.innerHTML = '';
+    if (mainGrid)
+        mainGrid.innerHTML = '';
+
+    const isIndexPage = !!mainGrid;
 
     projects.forEach(project => {
-        const projectCard = createProjectCard(project);
-        gridContainer.appendChild(projectCard);
+        if (isIndexPage && mainGrid) {
+            const projectCard = createProjectCard(project, true);
+            mainGrid.appendChild(projectCard);
+        } else {
+            const projectCard = createProjectCard(project, false);
+            if (project.year >= "2026") {
+                if (recentGrid) recentGrid.appendChild(projectCard);
+            } else {
+                if (olderGrid) olderGrid.appendChild(projectCard);
+            }
+        }
     });
 }
 

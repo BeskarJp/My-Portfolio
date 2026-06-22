@@ -39,6 +39,11 @@ nav {
     object-fit: contain;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -50,6 +55,11 @@ nav {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
+.nav-links a.active {
+    color: var(--accent);
+}
+
 
 .nav-links a:hover {
     color: var(--accent);
@@ -78,6 +88,10 @@ nav {
     font-size: 2rem;
 }
 
+.older-section {
+    padding-top: 0;
+}
+
 /* Footer */
 
 footer {
@@ -85,4 +99,12 @@ footer {
     padding: 2rem;
     color: var(--text-muted);
     border-top: 1px solid var(--border);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
 }

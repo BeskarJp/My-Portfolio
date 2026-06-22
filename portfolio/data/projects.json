@@ -21,6 +21,7 @@
     "skills": ["C", "Shell Scripting", "Parsing", "UNIX API", "Process Management"],
     "github_link": "https://github.com/BeskarJp/42sh"
   },
+
   {
     "id": 2,
     "name": {
@@ -43,6 +44,7 @@
     "skills": ["C#", "Unity", "Game Development", "Gameplay Programming"],
     "github_link": "https://github.com/BeskarJp/Key2Kill-Hackaton"
   },
+
     {
     "id": 3,
     "name": {
@@ -65,6 +67,7 @@
     "skills": ["HTML / CSS", "JavaScript (JS)", "Web Development"],
     "github_link": "https://github.com/BeskarJp/My-Portfolio"
   },
+
   {
     "id": 4,
     "name": {
@@ -78,7 +81,7 @@
         "es": "Proyecto Personal"
     },
     "language": "C",
-    "year": "2025-Now",
+    "year": "2025 and 2026",
     "description": {
       "fr": "Bibliothèque C personnelle réimplémentant des fonctions standard de la Lib C.",
       "en": "Personal C library with standard function reimplementations of C Lib.",
@@ -87,6 +90,7 @@
     "skills": ["C", "Low-level Programming", "Memory Management"],
     "github_link": "https://github.com/BeskarJp/my_CLib"
   },
+
   {
     "id": 5,
     "name": {
@@ -109,6 +113,7 @@
     "skills": ["C", "Linked Lists", "Sorting Algorithms", "Data Structures"],
     "github_link": "https://github.com/BeskarJp/Organized"
   },
+
   {
     "id": 6,
     "name": {
@@ -131,6 +136,7 @@
     "skills": ["JavaScript (JS)", "HTML / CSS", "Browser Extensions", "DOM Manipulation"],
     "github_link": "https://github.com/BeskarJp/MyEpitech-Extension"
   },
+
   {
     "id": 7,
     "name": {

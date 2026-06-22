@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Portfolio - BeskarJ</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/root.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html" class="logo-link">
+                    <img src="../assets/images/icons/My-Portfolio-logo.png" alt="Logo BeskarJp">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li> <a href="../index.html">Accueil</a> </li>
+                <li> <a href="#" class="active">Projets</a> </li>
+                <li> <a href="https://github.com/BeskarJp" target="_blank" rel="noopener noreferrer">GitHub</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="recent-projects" class="projects-section">
+            <h2>Mes Projets Récents</h2>
+            <p class="section-subtitle">Voici quelques projets sur lesquels j'ai travaillé récemment.</p>
+            <div id="recent-projects-grid" class="grid"></div>
+        </section>
+
+        <section id="older-projects" class="projects-section older-section">
+            <h2>Mes Anciens Projets</h2>
+            <div id="older-projects-grid" class="grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - BeskarJp's Portfolio.</p>
+    </footer>
+
+    <script src="../js/projects.js"></script>
+
+</body>
+
+</html>

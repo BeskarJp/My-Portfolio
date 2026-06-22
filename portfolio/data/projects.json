@@ -36,6 +36,7 @@
     },
     "language": "C# Unity",
     "year": "2026",
+    "image": "../assets/images/projects/Key2Kill.png",
     "description": {
       "fr": "Jeu de survie basé sur la frappe clavier développé en 48h.",
       "en": "Typing-based survival game developed in 48 hours.",
@@ -128,6 +129,7 @@
     },
     "language": "JavaScript (JS) (JS)",
     "year": "2026",
+    "image": "../assets/images/projects/MyEpitech-Extension.png",
     "description": {
       "fr": "Extension pour New MyEpitech.",
       "en": "Extension for New MyEpitech.",

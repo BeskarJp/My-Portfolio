@@ -1,0 +1,118 @@
+/* ==========================================================================
+   1. Variables & Root
+   ======================================================================= */
+:root {
+  --background: #f4efe9;
+  --border: #d9cfc4;
+  --muted: #5d6470;
+  --text: #1f242b;
+}
+
+/* ==========================================================================
+   2. Base Styles
+   ======================================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(244, 239, 233, 0));
+  pointer-events: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+main {
+  padding-top: 28px;
+}
+
+/* ==========================================================================
+   Typography & Font
+   ======================================================================= */
+.button-link,
+.secondary-link,
+.site-navigation a,
+.section-eyebrow,
+.profile-panel p,
+.profile-details,
+.project-card-footer,
+.skills-group-label,
+.journey-period,
+.journey-tag,
+.journey-company,
+.site-footer {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+   .site-logo {
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+/* ==========================================================================
+   Site & Header
+   ======================================================================= */
+.site-body {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Navigation */
+
+.site-navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.site-navigation a {
+  color: var(--muted);
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.site-navigation a:hover {
+  color: var(--text);
+}

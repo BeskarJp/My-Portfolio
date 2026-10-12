@@ -2,6 +2,10 @@
 
 Portfolio built with HTML, CSS and JavaScript. The project uses GitHub Pages and JSON data files for the projects, skills, and career timeline sections.
 
+### Portfolio Link
+
+* **Portfolio Website:** [BeskarJp's Portfolio](http://beskarjp.github.io/My-Portfolio/)
+
 ### Project structure
 
 - `.github/workflows/deploy.yml` — GitHub Pages deployment workflow.

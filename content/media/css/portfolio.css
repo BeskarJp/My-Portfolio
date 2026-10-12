@@ -67,14 +67,14 @@ main {
 .profile-details,
 .project-card-footer,
 .skills-group-label,
-.journey-period,
-.journey-tag,
-.journey-company,
+.career-period,
+.career-tag,
+.career-company,
 .site-footer {
   font-family: "Manrope", "Segoe UI", sans-serif;
 }
 
-   .site-logo {
+.site-logo {
   font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 }
 

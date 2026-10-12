@@ -86,23 +86,23 @@ function createTimelineItem(item) {
 	const description = document.createElement('p');
 	const company = document.createElement('span');
 
-	timelineItem.className = 'journey-item';
-	period.className = 'journey-period';
+	timelineItem.className = 'career-item';
+	period.className = 'career-period';
 	period.textContent = item.period;
 
-	card.className = 'journey-card';
+	card.className = 'career-card';
 
-	visual.className = 'journey-visual';
+	visual.className = 'career-visual';
 	image.src = buildImagePath(item.image);
 	image.alt = item.title;
 
-	content.className = 'journey-content';
-	label.className = 'journey-tag';
+	content.className = 'career-content';
+	label.className = 'career-tag';
 	label.textContent = item.tag || item.company || 'Experience';
 
 	title.textContent = item.title;
 	description.textContent = item.description;
-	company.className = 'journey-company';
+	company.className = 'career-company';
 	company.textContent = item.company;
 
 	content.appendChild(label);
@@ -192,22 +192,22 @@ window.addEventListener('DOMContentLoaded', async () => {
 	const previewContainer = document.querySelector('#project-preview');
 	const allProjectsContainer = document.querySelector('#all-projects');
 	const skillsContainer = document.querySelector('#skills-grid');
-	const journeyContainer = document.querySelector('#journey-timeline');
+	const careerContainer = document.querySelector('#career-timeline');
 
 	try {
 		const projects = await fetchJson('media/data/projects.json');
 		const skills = await fetchJson('media/data/skills.json');
-		const journeyData = await fetchJson('media/data/career.json');
+		const careerData = await fetchJson('media/data/career.json');
 
 		renderProjects(projects, previewContainer, 3);
 		renderProjects(projects, allProjectsContainer);
 		renderSkills(skills, skillsContainer);
-		renderTimeline(journeyData, journeyContainer);
+		renderTimeline(careerData, careerContainer);
 	} catch (error) {
 		console.error(error);
 		renderFallback(previewContainer);
 		renderFallback(allProjectsContainer);
 		renderFallback(skillsContainer);
-		renderFallback(journeyContainer);
+		renderFallback(careerContainer);
 	}
 });

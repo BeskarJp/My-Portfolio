@@ -58,29 +58,6 @@ a {
 }
 
 /* ==========================================================================
-   Typography & Font
-   ======================================================================= */
-
-.button-link,
-.secondary-link,
-.site-navigation a,
-.section-eyebrow,
-.profile-panel p,
-.profile-details,
-.project-card-footer,
-.skills-group-label,
-.career-period,
-.career-tag,
-.career-company,
-.site-footer {
-  font-family: "Manrope", "Segoe UI", sans-serif;
-}
-
-.site-logo {
-  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-}
-
-/* ==========================================================================
    Site & Header
    ======================================================================= */
 

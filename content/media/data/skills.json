@@ -70,5 +70,17 @@
     "name": "Exegol",
     "description": "Penetration testing tool for Cybersecurity.",
     "icon": "exegol.svg"
+  },
+  {
+    "category": "IDE",
+    "name": "VS Code",
+    "description": "Modern code editor for centralizing development.",
+    "icon": "vscode.svg"
+  },
+  {
+    "category": "IDE",
+    "name": "JetBrains",
+    "description": "An IDEs tailored to each major programming language.",
+    "icon": "jetbrains.svg"
   }
 ]

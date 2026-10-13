@@ -10,7 +10,7 @@ Portfolio built with HTML, CSS and JavaScript. The project uses GitHub Pages and
 
 - `.github/workflows/deploy.yml` — GitHub Pages deployment workflow.
 - `content/` — Files served to GitHub Pages.
-- `content/media/data/` — JSON content for projects, skills, and career.
+- `content/media/data/` — JSON content for projects, skills, career and certifications.
 - `content/media/` — Files in interaction with HTML.
 
 ### How does it works
@@ -20,6 +20,7 @@ Some content is generated from JSON files. The content can be updated easily wit
 - `media/data/projects.json`
 - `media/data/skills.json`
 - `media/data/career.json`
+- `media/data/certifications.json`
 
 This makes the portfolio easy to personalize.
 

@@ -11,8 +11,27 @@ function buildImagePath(imageName) {
 	return imageName ? `media/img/career/${imageName}` : 'media/img/project-1.svg';
 }
 
+function buildCertificationImagePath(imageName) {
+	if (!imageName) {
+		return 'media/img/ano_pp.png';
+	}
+	return imageName.includes('/') ? imageName : `media/img/certifications/${imageName}`;
+}
+
 function isExternalLink(link) {
 	return typeof link === 'string' && /^https?:\/\//i.test(link);
+}
+
+function createExternalLink(link, label, className) {
+	const anchor = document.createElement('a');
+
+	anchor.className = className;
+	anchor.href = link;
+	anchor.target = '_blank';
+	anchor.rel = 'noreferrer';
+	anchor.textContent = label;
+
+	return anchor;
 }
 
 function createProjectCard(project) {
@@ -87,6 +106,10 @@ function createTimelineItem(item) {
 	const company = document.createElement('span');
 
 	timelineItem.className = 'career-item';
+	if (item.parent) {
+		timelineItem.classList.add('career-item-child');
+		timelineItem.dataset.parent = item.parent;
+	}
 	period.className = 'career-period';
 	period.textContent = item.period;
 
@@ -118,6 +141,72 @@ function createTimelineItem(item) {
 	timelineItem.appendChild(card);
 
 	return timelineItem;
+}
+
+function createCertificationCard(certification) {
+	const card = document.createElement('article');
+	const visual = document.createElement('div');
+	const image = document.createElement('img');
+	const content = document.createElement('div');
+	const name = document.createElement('h3');
+	const issuer = document.createElement('p');
+	const id = document.createElement('p');
+	const footer = document.createElement('div');
+	const skillsToggle = document.createElement('button');
+	const skills = document.createElement('div');
+
+	card.className = 'certification-card';
+	visual.className = 'certification-visual';
+	image.src = buildCertificationImagePath(certification.image);
+	image.alt = `${certification.name} logo`;
+	visual.appendChild(image);
+
+	content.className = 'certification-content';
+	name.textContent = certification.name;
+	issuer.className = 'certification-issuer';
+	issuer.textContent = certification.issuer || '';
+	id.className = 'certification-id';
+	id.textContent = `ID: ${certification.id}`;
+
+	footer.className = 'certification-footer';
+	if (isExternalLink(certification.site)) {
+		footer.appendChild(createExternalLink(certification.site, 'Visit site ↗', 'certification-site'));
+	}
+
+	skillsToggle.className = 'skills-toggle';
+	skillsToggle.type = 'button';
+	skillsToggle.textContent = 'View skills';
+	skillsToggle.setAttribute('aria-expanded', 'false');
+	
+	skills.className = 'certification-skills';
+	skills.style.display = 'none';
+
+	(certification.skills || []).forEach((skill) => {
+		const tag = document.createElement('span');
+		tag.className = 'skill-tag';
+		tag.textContent = skill;
+		skills.appendChild(tag);
+	});
+
+	skillsToggle.addEventListener('click', () => {
+		const isExpanded = skillsToggle.getAttribute('aria-expanded') === 'true';
+		skillsToggle.setAttribute('aria-expanded', String(!isExpanded));
+		skillsToggle.textContent = isExpanded ? 'View skills' : 'Hide skills';
+		skills.style.display = isExpanded ? 'none' : 'flex';
+	});
+
+	footer.appendChild(skillsToggle);
+	content.appendChild(name);
+	if (certification.issuer) {
+		content.appendChild(issuer);
+	}
+	content.appendChild(id);
+	content.appendChild(footer);
+	content.appendChild(skills);
+	card.appendChild(visual);
+	card.appendChild(content);
+
+	return card;
 }
 
 function renderProjects(projects, container, limit) {
@@ -176,6 +265,23 @@ function renderTimeline(items, container) {
 	});
 }
 
+function renderCertifications(certifications, container) {
+	if (!container) {
+		return;
+	}
+	if (!certifications.length) {
+		const emptyState = document.createElement('p');
+		emptyState.className = 'certifications-empty';
+		emptyState.textContent = 'Certifications will be added soon.';
+		container.appendChild(emptyState);
+		return;
+	}
+
+	certifications.forEach((certification) => {
+		container.appendChild(createCertificationCard(certification));
+	});
+}
+
 function renderFallback(container) {
 	if (!container) {
 		return;
@@ -193,21 +299,25 @@ window.addEventListener('DOMContentLoaded', async () => {
 	const allProjectsContainer = document.querySelector('#all-projects');
 	const skillsContainer = document.querySelector('#skills-grid');
 	const careerContainer = document.querySelector('#career-timeline');
+	const certificationsContainer = document.querySelector('#certifications-grid');
 
 	try {
 		const projects = await fetchJson('media/data/projects.json');
 		const skills = await fetchJson('media/data/skills.json');
 		const careerData = await fetchJson('media/data/career.json');
+		const certifications = await fetchJson('media/data/certifications.json');
 
 		renderProjects(projects, previewContainer, 3);
 		renderProjects(projects, allProjectsContainer);
 		renderSkills(skills, skillsContainer);
 		renderTimeline(careerData, careerContainer);
+		renderCertifications(certifications, certificationsContainer);
 	} catch (error) {
 		console.error(error);
 		renderFallback(previewContainer);
 		renderFallback(allProjectsContainer);
 		renderFallback(skillsContainer);
 		renderFallback(careerContainer);
+		renderFallback(certificationsContainer);
 	}
 });

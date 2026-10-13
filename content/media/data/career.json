@@ -13,6 +13,7 @@
     "tag": "Internship",
     "image": "noparking.png",
     "description": "NoParking is a Web Software company specializing in time management and activity tracking. It owns Opentime and Fissa.",
-    "company": "NoParking - Lille"
+    "company": "NoParking - Lille",
+    "parent": "Epitech Student"
   }
 ]

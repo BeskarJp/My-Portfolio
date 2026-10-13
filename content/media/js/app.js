@@ -295,6 +295,29 @@ function renderFallback(container) {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
+	const menuToggle = document.querySelector('.menu-toggle');
+	const siteNavigation = document.querySelector('.site-navigation');
+
+	if (menuToggle && siteNavigation) {
+		menuToggle.addEventListener('click', () => {
+			const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+
+			menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+			menuToggle.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
+			menuToggle.classList.toggle('is-open', !isExpanded);
+			siteNavigation.classList.toggle('is-open', !isExpanded);
+		});
+
+		siteNavigation.querySelectorAll('a').forEach((link) => {
+			link.addEventListener('click', () => {
+				menuToggle.setAttribute('aria-expanded', 'false');
+				menuToggle.setAttribute('aria-label', 'Open navigation menu');
+				menuToggle.classList.remove('is-open');
+				siteNavigation.classList.remove('is-open');
+			});
+		});
+	}
+
 	const previewContainer = document.querySelector('#project-preview');
 	const allProjectsContainer = document.querySelector('#all-projects');
 	const skillsContainer = document.querySelector('#skills-grid');

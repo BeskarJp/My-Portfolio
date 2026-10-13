@@ -1,7 +1,11 @@
 /* ==========================================================================
    Variables & Root
    ======================================================================= */
+
 :root {
+  --accent: #3f6b64;
+  --accent-2: #b9854e;
+  --accent-soft: rgba(63, 107, 100, 0.08);
   --background: #f4efe9;
   --border: #d9cfc4;
   --muted: #5d6470;
@@ -15,6 +19,7 @@
 /* ==========================================================================
    Base Styles
    ======================================================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -59,6 +64,7 @@ main {
 /* ==========================================================================
    Typography & Font
    ======================================================================= */
+
 .button-link,
 .secondary-link,
 .site-navigation a,
@@ -81,6 +87,7 @@ main {
 /* ==========================================================================
    Site & Header
    ======================================================================= */
+
 .site-body {
   width: min(1100px, calc(100% - 32px));
   margin: 0 auto;
@@ -122,8 +129,292 @@ main {
 }
 
 /* ==========================================================================
+   Link in Website
+   ======================================================================= */
+
+.button-link,
+.secondary-link {
+  display: inline-flex;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  padding: 0.68rem 1.15rem;
+  color: var(--soft);
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.button-link:hover,
+.secondary-link:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: rgba(63, 107, 100, 0.08);
+  transform: translateY(-1px);
+}
+
+.secondary-link {
+  margin-top: 22px;
+}
+
+/* ==========================================================================
+   Section HTML Balise
+   ======================================================================= */
+
+.content-section {
+  padding: 54px 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  letter-spacing: -0.04em;
+}
+
+.section-title span {
+  color: var(--accent-2);
+}
+
+/* ==========================================================================
+   Projects
+   ======================================================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent-2);
+  transform: scale(1.01);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: var(--panel-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-card-content {
+  padding: 16px 18px 18px;
+}
+
+.project-card-content h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.project-card-content p {
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.project-card-footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card-footer span {
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   Skills
+   ======================================================================= */
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skills-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skills-group-label {
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.skill-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 10px 12px;
+  min-height: 120px;
+}
+
+.skill-card img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.skill-card h3 {
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+}
+
+.skill-card p {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Career
+   ======================================================================= */
+
+.career-timeline {
+  position: relative;
+  margin-top: 28px;
+  padding-left: 20px;
+}
+
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.career-item {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 26px;
+}
+
+.career-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  border: 4px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.career-period {
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.career-card {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+
+.career-visual {
+  width: 100%;
+  max-width: 72px;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  background: var(--panel-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.career-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.career-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.career-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.career-content h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.career-content p {
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.8;
+}
+
+.career-company {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
    Contact Panel
    ======================================================================= */
+
 .contact-panel {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -179,6 +470,7 @@ main {
 /* ==========================================================================
    Footer
    ======================================================================= */
+
 .site-footer {
   padding: 34px 0 48px;
   color: var(--muted);

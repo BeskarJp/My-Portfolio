@@ -1,0 +1,18 @@
+[
+  {
+    "period": "2025 — 2030",
+    "title": "Epitech Student",
+    "tag": "School",
+    "image": "epitech_mono.svg",
+    "description": "Computer Science School focused on project-based learning and hands-on training, fostering independence and teamwork through various programming languages.",
+    "company": "Epitech Lille"
+  },
+  {
+    "period": "August — December 2026",
+    "title": "Full Stack Developer",
+    "tag": "Internship",
+    "image": "noparking.svg",
+    "description": "NoParking is a Web Software company specializing in time management and activity tracking. It owns Opentime and Fissa.",
+    "company": "NoParking - Lille"
+  }
+]

@@ -8,7 +8,7 @@ async function fetchJson(filePath) {
 }
 
 function buildImagePath(imageName) {
-	return imageName ? `media/img/${imageName}` : 'media/img/project-1.svg';
+	return imageName ? `media/img/career/${imageName}` : 'media/img/project-1.svg';
 }
 
 function isExternalLink(link) {
@@ -30,7 +30,7 @@ function createProjectCard(project) {
 	card.target = isExternalLink(project.link) ? '_blank' : '_self';
 	card.rel = isExternalLink(project.link) ? 'noreferrer' : '';
 
-	image.src = `media/img/${project.image}`;
+	image.src = `media/img/projects/${project.image}`;
 	image.alt = project.title;
 
 	content.className = 'project-card-content';
@@ -61,7 +61,7 @@ function createSkillCard(skill) {
 
 	card.className = 'skill-card';
 
-	icon.src = `media/img/${skill.icon}`;
+	icon.src = `media/img/skills/${skill.icon}`;
 	icon.alt = `${skill.name} icon`;
 
 	title.textContent = skill.name;

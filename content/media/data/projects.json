@@ -1,0 +1,32 @@
+[
+  {
+    "title": "42sh",
+    "description": "C Project at Epitech which recreate a TCSH-compatible with Linux shell.",
+    "image": "42sh.svg",
+    "link": "https://github.com/BeskarJp/42sh"
+  },
+  {
+    "title": "OWASP-Juice-Shop",
+    "description": "Cybersecurity project focused on security auditing and exploiting web vulnerabilities on OWASP Juice Shop.",
+    "image": "owasp-juice-shop.svg",
+    "link": "https://github.com/BeskarJp/OWASP-Juice-Shop"
+  },
+  {
+    "title": "Organized",
+    "description": "C Project for inventory management at a fictional laboratory.",
+    "image": "organized.svg",
+    "link": "https://github.com/BeskarJp/Organized"
+  },
+  {
+    "title": "MyEpitech-Extension",
+    "description": "Browser extension for Epitech's intranet, adding automated percentage calculation for TAs (Test Results).",
+    "image": "my-epitech-extension.svg",
+    "link": "https://github.com/BeskarJp/MyEpitech-Extension"
+  },
+  {
+    "title": "Key2Kill-Hackaton",
+    "description": "Typing-based survival game developed in 48 hours with C# and Unity for a hackathon around chance.",
+    "image": "key2kill-hackaton.svg",
+    "link": "https://github.com/BeskarJp/Key2Kill-Hackaton"
+  }
+]

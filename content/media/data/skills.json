@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Languages",
+    "name": "C",
+    "description": "Language for low-level system programming and memory management.",
+    "icon": "c.svg"
+  },
+  {
+    "category": "Languages",
+    "name": "C++",
+    "description": "Object-oriented language for optimization and system software.",
+    "icon": "cpp.svg"
+  },
+  {
+    "category": "Languages",
+    "name": "HTML & CSS",
+    "description": "Structuring and designing modern, accessible web interfaces.",
+    "icon": "html-css.svg"
+  }, 
+  {
+    "category": "Languages",
+    "name": "JavaScript",
+    "description": "Development of dynamic client-side interactivity and creation of advanced web features.",
+    "icon": "js.svg"
+  },
+  {
+    "category": "Languages",
+    "name": "PHP (POO)",
+    "description": "Design of structured and back-end architectures based on object-oriented principles.",
+    "icon": "php.svg"
+  },
+  {
+    "category": "Languages",
+    "name": "MySQL",
+    "description": "Design, querying and management of databases.",
+    "icon": "sql.svg"
+  },
+  {
+    "category": "Languages",
+    "name": "Other",
+    "description": "Ability to adapt and learn new programming languages quickly.",
+    "icon": "other.svg"
+  },
+  {
+    "category": "Technos & Tools",
+    "name": "Git/GitHub",
+    "description": "Project management and effective teamwork.",
+    "icon": "github.svg"
+  },
+  {
+    "category": "Technos & Tools",
+    "name": "CI/CD",
+    "description": "Automation of testing, integration and continuous application deployment.",
+    "icon": "ci-cd.svg"
+  },
+  {
+    "category": "Technos & Tools",
+    "name": "Docker",
+    "description": "Application containerization for development and production.",
+    "icon": "docker.svg"
+  },
+  {
+    "category": "Technos & Tools",
+    "name": "Linux",
+    "description": "Primary OS for development and SysAdmin.",
+    "icon": "linux.svg"
+  },
+  {
+    "category": "Technos & Tools",
+    "name": "Exegol",
+    "description": "Penetration testing tool for Cybersecurity.",
+    "icon": "exegol.svg"
+  }
+]

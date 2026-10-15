@@ -50,7 +50,7 @@
   {
     "category": "Technos & Tools",
     "name": "CI/CD",
-    "description": "Automation of testing, integration and continuous application deployment.",
+    "description": "Automation of testing, integration and continuous app deployment.",
     "icon": "ci-cd.svg"
   },
   {
@@ -61,26 +61,50 @@
   },
   {
     "category": "Technos & Tools",
-    "name": "Linux",
-    "description": "Primary OS for development and SysAdmin.",
+    "name": "Linux/UNIX",
+    "description": "Primary OS for development, bash and SysAdmin.",
     "icon": "linux.svg"
   },
   {
     "category": "Technos & Tools",
-    "name": "Exegol",
-    "description": "Penetration testing tool for Cybersecurity.",
+    "name": "Apache",
+    "description": "Web server configuration and deployment for Web Applications.",
+    "icon": "apache.svg"
+  },
+  {
+    "category": "Cybersecurity",
+    "name": "SysReptor",
+    "description": "Application designed to simplify and automate the creation of pentest reports.",
+    "icon": "sysreptor.svg"
+  },
+  {
+    "category": "Cybersecurity",
+    "name": "BurspSuite",
+    "description": "Reference tools for auditing, digitization and security testing of web applications.",
+    "icon": "burpsuite.svg"
+  },
+  {
+    "category": "Cybersecurity",
+    "name": "Ghidra",
+    "description": "Framework for disassemble, decompile and analyze binary files.",
+    "icon": "ghidra.svg"
+  },
+  {
+    "category": "Cybersecurity",
+    "name": "Exegol - Pentesting Tools",
+    "description": "Nmap, GoBuster, John The Ripper, Hashcat, Wireshark, etc",
     "icon": "exegol.svg"
   },
   {
     "category": "IDE",
     "name": "VS Code",
-    "description": "Modern code editor for centralizing development.",
+    "description": "Lightweight and versatile IDE that adapts to different languages thanks to its extensive ecosystem of extensions.",
     "icon": "vscode.svg"
   },
   {
     "category": "IDE",
     "name": "JetBrains",
-    "description": "An IDEs tailored to each major programming language.",
+    "description": "An IDE tailored to each major programming language.",
     "icon": "jetbrains.svg"
   }
 ]

@@ -320,7 +320,9 @@ a {
 .project-card img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  display: block;
+  object-fit: contain;
+  padding: 12px;
   background: var(--panel-alt);
   border-bottom: 1px solid var(--border);
 }

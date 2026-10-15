@@ -2,7 +2,7 @@
   {
     "title": "42sh",
     "description": "C Project at Epitech which recreate a TCSH-compatible with Linux shell.",
-    "image": "42sh.svg",
+    "image": "42sh.png",
     "link": "https://github.com/BeskarJp/42sh"
   },
   {
@@ -14,19 +14,19 @@
   {
     "title": "Organized",
     "description": "C Project for inventory management at a fictional laboratory.",
-    "image": "organized.svg",
+    "image": "organized.png",
     "link": "https://github.com/BeskarJp/Organized"
   },
   {
     "title": "MyEpitech-Extension",
     "description": "Browser extension for Epitech's intranet, adding automated percentage calculation for TAs (Test Results).",
-    "image": "my-epitech-extension.svg",
-    "link": "https://github.com/BeskarJp/MyEpitech-Extension"
+    "image": "my-epitech-extension.png",
+    "link": "https://addons.mozilla.org/en-US/firefox/addon/myepitech-tests-percentage/"
   },
   {
     "title": "Key2Kill-Hackaton",
     "description": "Typing-based survival game developed in 48 hours with C# and Unity for a hackathon around chance.",
-    "image": "key2kill-hackaton.svg",
+    "image": "key2kill-hackaton.png",
     "link": "https://github.com/BeskarJp/Key2Kill-Hackaton"
   }
 ]
